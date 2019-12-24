@@ -1,0 +1,26 @@
+github api
+
+基于GitHub API的GitHub文件上传工具
+
+jgit是java实现的git版本控制。主要的模块如下：
+org.eclipse.jgit 核心实现，包括git命令、协议等
+org.eclipse.jgit.archive 支持导出各种压缩的格式
+org.eclipse.jgit.http.server 支持http协议的服务器，主要提供GitServlet
+
+
+maven配置
+<dependency>
+	<groupId>org.eclipse.jgit</groupId>
+	<artifactId>org.eclipse.jgit</artifactId>
+	<version>4.11.0.201803080745-r</version>
+<dependency>
+
+
+
+jgit学习：https://blog.51cto.com/5162886/2094475  我可以用来创建本地仓库，向远程提交代码
+          https://blog.csdn.net/yulin_Hu/article/details/81673446  
+Github Java API：http://github-api.kohsuke.org/project-reports.html  可以用来查看远程项目提交情况？
+
+
+好处：不需要在本地安装git环境，通过本插件即可将本地代码文件上传到远程仓库。
+缺点：仅支持上传新文件，如果路径存在同名文件，将上传失败（无法覆盖）
